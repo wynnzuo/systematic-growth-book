@@ -5,7 +5,7 @@ language = "zh"
 description = "一套可落地、可迭代的成长方法论，帮你把碎片经验变成系统能力。"
 
 [output.html]
-default-theme = "ayu"
+default-theme = "light"
 preferred-dark-theme = "navy"
 mathjax-support = false
 git-repository-url = "https://github.com/wynnzuo/systematic-growth-book"

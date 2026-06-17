@@ -1,0 +1,885 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="ayu sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>系统化成长：自我迭代方法论</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="一套可落地、可迭代的成长方法论，帮你把碎片经验变成系统能力。">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-0392ca55.css">
+        <link rel="stylesheet" href="css/chrome-fc474251.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "ayu";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-8f4a803e.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-05a112fc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">系统化成长：自我迭代方法论</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+                        <a href="https://github.com/wynnzuo/systematic-growth-book" title="Git repository" aria-label="Git repository">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="前言"><a class="header" href="#前言">前言</a></h1>
+<blockquote>
+<p>这不是一本教你“成功学“的书，而是一套你可以直接拿来用的方法论系统。</p>
+</blockquote>
+<h2 id="为什么要写这本书"><a class="header" href="#为什么要写这本书">为什么要写这本书</a></h2>
+<p>工作几年后我发现一个现象：很多人（包括我自己）每天都在学习、在忙，但年底回头看，真正沉淀下来的东西很少。碎片化的知识、即兴的决策、反复踩同样的坑——这不是能力问题，是缺少<strong>系统</strong>。</p>
+<p>这本书记录和整理了我自己在成长过程中验证过的方法论。它们不是理论推演，而是在写代码、做项目、带团队、学新东西的过程中，被反复打磨出来的可操作框架。</p>
+<h2 id="这本书适合谁"><a class="header" href="#这本书适合谁">这本书适合谁</a></h2>
+<ul>
+<li>想系统梳理自己方法论的技术人</li>
+<li>感觉忙但成长慢、想建立体系的职场人</li>
+<li>认同“可迭代“优于“一次性爆发“的人</li>
+</ul>
+<h2 id="怎么读"><a class="header" href="#怎么读">怎么读</a></h2>
+<p>这本书设计成可以<strong>按顺序读</strong>，也可以<strong>按需跳读</strong>：</p>
+<ul>
+<li><strong>第一篇</strong> 讲认知，帮你理解系统化成长是什么、为什么有效</li>
+<li><strong>第二篇</strong> 是核心方法论，每条都是独立的工具，随时取用</li>
+<li><strong>第三篇</strong> 讲落地，帮你把这些方法变成日常习惯</li>
+<li><strong>第四篇</strong> 是进阶视野，持续迭代的方向</li>
+</ul>
+<p>每章末尾有「行动清单」，那是这本书唯一真正重要的部分——<strong>读了不做等于没读</strong>。</p>
+<hr>
+<p><strong>开始之前，问自己一个问题：</strong></p>
+<p>如果把你过去一年的经验打包成一个“升级包“安装给自己，这个包里有什么？</p>
+<p>如果你答不上来，这本书就是为你写的。</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="为什么要系统化成长"><a class="header" href="#为什么要系统化成长">为什么要系统化成长</a></h1>
+<h2 id="碎片化成长的问题"><a class="header" href="#碎片化成长的问题">碎片化成长的问题</a></h2>
+<ul>
+<li>学了很多“干货“，但用不出来</li>
+<li>每天很忙，年底复盘没什么沉淀</li>
+<li>同一个坑踩了三次</li>
+</ul>
+<h2 id="系统的力量"><a class="header" href="#系统的力量">系统的力量</a></h2>
+<ul>
+<li>系统 vs 目标的区别（参考《原子习惯》）</li>
+<li>系统让经验可复用、可迁移</li>
+<li>系统降低决策疲劳</li>
+</ul>
+<h2 id="这本书的成长模型"><a class="header" href="#这本书的成长模型">这本书的成长模型</a></h2>
+<p>用一张图或一段话描述你的模型框架——比如：<strong>认知 → 方法 → 实践 → 迭代</strong> 的循环。</p>
+<h2 id="本章小结"><a class="header" href="#本章小结">本章小结</a></h2>
+<ul>
+<li>要点 1</li>
+<li>要点 2</li>
+</ul>
+<h2 id="行动清单"><a class="header" href="#行动清单">行动清单</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> 花 30 分钟回顾过去一年，列出你反复遇到的 3 个问题</li>
+<li><input disabled="" type="checkbox"> 思考：它们之间有没有共同的模式？</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="成长的底层逻辑"><a class="header" href="#成长的底层逻辑">成长的底层逻辑</a></h1>
+<h2 id="成长不是线性的"><a class="header" href="#成长不是线性的">成长不是线性的</a></h2>
+<ul>
+<li>平台期是正常的，积累够了才会跃迁</li>
+<li>用软件开发类比：重构之前看起来什么都没变</li>
+</ul>
+<h2 id="输入--处理--输出"><a class="header" href="#输入--处理--输出">输入 → 处理 → 输出</a></h2>
+<p>把你的成长拆成三个环节：</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>环节</th><th>定义</th><th>常见问题</th></tr>
+</thead>
+<tbody>
+<tr><td>输入</td><td>阅读、听课、与人交流</td><td>输入太多不消化</td></tr>
+<tr><td>处理</td><td>思考、整理、内化</td><td>想太多不行动</td></tr>
+<tr><td>输出</td><td>写作、分享、实践</td><td>输出太少无法验证</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="闭环飞轮"><a class="header" href="#闭环飞轮">闭环飞轮</a></h2>
+<ul>
+<li>小闭环跑通比大规划重要</li>
+<li>反馈越快，迭代越迅速</li>
+</ul>
+<h2 id="本章小结-1"><a class="header" href="#本章小结-1">本章小结</a></h2>
+<h2 id="行动清单-1"><a class="header" href="#行动清单-1">行动清单</a></h2>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="复利思维每天进步-1"><a class="header" href="#复利思维每天进步-1">复利思维：每天进步 1%</a></h1>
+<h2 id="复利在成长中的体现"><a class="header" href="#复利在成长中的体现">复利在成长中的体现</a></h2>
+<ul>
+<li>知识的复利：你学得越多，学新东西越快</li>
+<li>人脉的复利：弱连接的力量</li>
+<li>信任的复利：靠谱是最值钱的标签</li>
+</ul>
+<h2 id="为什么大部分人做不到"><a class="header" href="#为什么大部分人做不到">为什么大部分人做不到</a></h2>
+<ul>
+<li>高估短期、低估长期</li>
+<li>缺乏可累积的系统</li>
+</ul>
+<h2 id="建立你的复利账户"><a class="header" href="#建立你的复利账户">建立你的“复利账户“</a></h2>
+<ul>
+<li>哪些行为是可以累积的？</li>
+<li>哪些是消耗性的？</li>
+</ul>
+<h2 id="本章小结-2"><a class="header" href="#本章小结-2">本章小结</a></h2>
+<h2 id="行动清单-2"><a class="header" href="#行动清单-2">行动清单</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> 列出你正在做的 3 件“有复利效应“的事</li>
+<li><input disabled="" type="checkbox"> 列出 1 件你想开始做的</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="自我觉察认识自己的起点"><a class="header" href="#自我觉察认识自己的起点">自我觉察：认识自己的起点</a></h1>
+<h2 id="为什么自我觉察是第一课"><a class="header" href="#为什么自我觉察是第一课">为什么自我觉察是第一课</a></h2>
+<ul>
+<li>没有准确的起点，无法衡量进步</li>
+<li>大多数人高估自己、低估习惯</li>
+</ul>
+<h2 id="几个实用的自我诊断工具"><a class="header" href="#几个实用的自我诊断工具">几个实用的自我诊断工具</a></h2>
+<ul>
+<li>时间日志：记录一周的时间花在哪</li>
+<li>情绪日记：识别触发模式</li>
+<li>反馈收集：问身边的人 3 个问题</li>
+</ul>
+<h2 id="找到你的优势区"><a class="header" href="#找到你的优势区">找到你的优势区</a></h2>
+<ul>
+<li>擅长 ≠ 喜欢 ≠ 有价值</li>
+<li>三圈交集：擅长 × 喜欢 × 市场需要</li>
+</ul>
+<h2 id="本章小结-3"><a class="header" href="#本章小结-3">本章小结</a></h2>
+<h2 id="行动清单-3"><a class="header" href="#行动清单-3">行动清单</a></h2>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="复盘从经验中提取价值"><a class="header" href="#复盘从经验中提取价值">复盘：从经验中提取价值</a></h1>
+<blockquote>
+<p>经验本身不是最好的老师，<strong>复盘后的经验</strong>才是。</p>
+</blockquote>
+<h2 id="复盘和总结的区别"><a class="header" href="#复盘和总结的区别">复盘和总结的区别</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>总结</th><th>复盘</th></tr>
+</thead>
+<tbody>
+<tr><td>记录发生了什么</td><td>分析为什么会发生</td></tr>
+<tr><td>一次性</td><td>可复用的方法论</td></tr>
+<tr><td>关注结果</td><td>关注过程 + 决策链路</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="kpt-复盘框架"><a class="header" href="#kpt-复盘框架">KPT 复盘框架</a></h2>
+<ul>
+<li><strong>Keep</strong>（保持）：做对了什么，下次继续</li>
+<li><strong>Problem</strong>（问题）：哪里没做好，原因是什么</li>
+<li><strong>Try</strong>（尝试）：下一步打算怎么改</li>
+</ul>
+<h2 id="复盘的频率和形式"><a class="header" href="#复盘的频率和形式">复盘的频率和形式</a></h2>
+<ul>
+<li>日复盘：10 分钟</li>
+<li>周复盘：30 分钟</li>
+<li>项目复盘：1-2 小时</li>
+</ul>
+<h2 id="一个完整的复盘模板"><a class="header" href="#一个完整的复盘模板">一个完整的复盘模板</a></h2>
+<pre><code>## KPT 复盘
+
+日期：xxxx-xx-xx
+项目/场景：
+
+### Keep
+-
+-
+
+### Problem
+-
+-
+
+### Try
+-
+-
+</code></pre>
+<h2 id="本章小结-4"><a class="header" href="#本章小结-4">本章小结</a></h2>
+<h2 id="行动清单-4"><a class="header" href="#行动清单-4">行动清单</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> 对最近完成的一件事做一次 KPT 复盘</li>
+<li><input disabled="" type="checkbox"> 设置每周复盘提醒</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="知识管理构建第二大脑"><a class="header" href="#知识管理构建第二大脑">知识管理：构建第二大脑</a></h1>
+<blockquote>
+<p>你的大脑是用来<strong>思考</strong>的，不是用来<strong>存储</strong>的。</p>
+</blockquote>
+<h2 id="为什么需要第二大脑"><a class="header" href="#为什么需要第二大脑">为什么需要第二大脑</a></h2>
+<ul>
+<li>信息过载 vs 知识沉淀</li>
+<li>好记性不如烂笔头——但烂笔头需要系统</li>
+</ul>
+<h2 id="para-方法tiago-forte"><a class="header" href="#para-方法tiago-forte">PARA 方法（Tiago Forte）</a></h2>
+<ul>
+<li><strong>Projects</strong>：当前在做的项目</li>
+<li><strong>Areas</strong>：长期负责的领域</li>
+<li><strong>Resources</strong>：将来可能用到的素材</li>
+<li><strong>Archives</strong>：已完成或不再活跃的内容</li>
+</ul>
+<h2 id="我的知识管理系统"><a class="header" href="#我的知识管理系统">我的知识管理系统</a></h2>
+<p>分享一下你自己实际在用的系统——用什么工具、怎么分类、怎么维护。</p>
+<h2 id="写笔记的几个习惯"><a class="header" href="#写笔记的几个习惯">写笔记的几个习惯</a></h2>
+<ul>
+<li>不要收藏，要改写</li>
+<li>用自己的话写，而不是复制粘贴</li>
+<li>笔记之间建立链接</li>
+</ul>
+<h2 id="本章小结-5"><a class="header" href="#本章小结-5">本章小结</a></h2>
+<h2 id="行动清单-5"><a class="header" href="#行动清单-5">行动清单</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> 建立你自己的 PARA 文件夹结构</li>
+<li><input disabled="" type="checkbox"> 把本周收藏的 3 篇文章用自己的话写笔记</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="项目管理把人生当产品做"><a class="header" href="#项目管理把人生当产品做">项目管理：把人生当产品做</a></h1>
+<blockquote>
+<p>写代码需要架构，做事情也需要。</p>
+</blockquote>
+<h2 id="人生中处处是项目"><a class="header" href="#人生中处处是项目">人生中处处是项目</a></h2>
+<ul>
+<li>换工作、学新技术、装修、健身——都是项目</li>
+<li>用项目思维管理，而不是“顺其自然“</li>
+</ul>
+<h2 id="一个项目管理的简易框架"><a class="header" href="#一个项目管理的简易框架">一个项目管理的简易框架</a></h2>
+<ol>
+<li><strong>定义目标</strong>：完成的标准是什么？</li>
+<li><strong>拆解任务</strong>：WBS（工作分解结构）</li>
+<li><strong>排优先级</strong>：重要 vs 紧急</li>
+<li><strong>执行追踪</strong>：每周检查进度</li>
+<li><strong>复盘归档</strong>：经验入库</li>
+</ol>
+<h2 id="常用模板"><a class="header" href="#常用模板">常用模板</a></h2>
+<pre><code>项目名称：
+目标（完成标准）：
+截止时间：
+关键里程碑：
+- [ ] 里程碑 1：日期
+- [ ] 里程碑 2：日期
+复盘笔记：
+</code></pre>
+<h2 id="本章小结-6"><a class="header" href="#本章小结-6">本章小结</a></h2>
+<h2 id="行动清单-6"><a class="header" href="#行动清单-6">行动清单</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> 把当前手头最重要的一件事当项目来管理</li>
+<li><input disabled="" type="checkbox"> 写出它的目标、里程碑和截止时间</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="决策框架少犯错的系统"><a class="header" href="#决策框架少犯错的系统">决策框架：少犯错的系统</a></h1>
+<blockquote>
+<p>好决策不是靠直觉，是靠框架。</p>
+</blockquote>
+<h2 id="为什么需要决策框架"><a class="header" href="#为什么需要决策框架">为什么需要决策框架</a></h2>
+<ul>
+<li>人天生不是理性的（认知偏差）</li>
+<li>重大决策不该凭感觉</li>
+<li>小决策太多会消耗意志力</li>
+</ul>
+<h2 id="几个实用的决策框架"><a class="header" href="#几个实用的决策框架">几个实用的决策框架</a></h2>
+<h3 id="1-加权决策矩阵"><a class="header" href="#1-加权决策矩阵">1. 加权决策矩阵</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>选项</th><th>权重</th><th>评分</th><th>加权分</th></tr>
+</thead>
+<tbody>
+<tr><td>选项 A</td><td>30%</td><td>8</td><td>2.4</td></tr>
+<tr><td>选项 B</td><td>30%</td><td>6</td><td>1.8</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="2-101010-法则"><a class="header" href="#2-101010-法则">2. 10/10/10 法则</a></h3>
+<ul>
+<li>10 分钟后怎么看这个决定？</li>
+<li>10 个月后呢？</li>
+<li>10 年后呢？</li>
+</ul>
+<h3 id="3-反向思维"><a class="header" href="#3-反向思维">3. 反向思维</a></h3>
+<ul>
+<li>不想看到什么结果 → 倒推哪些决策会导致它</li>
+</ul>
+<h2 id="决策记录模板"><a class="header" href="#决策记录模板">决策记录模板</a></h2>
+<pre><code>决策：
+背景：
+考虑过的选项：
+最终选择及理由：
+结果（后续补充）：
+</code></pre>
+<h2 id="本章小结-7"><a class="header" href="#本章小结-7">本章小结</a></h2>
+<h2 id="行动清单-7"><a class="header" href="#行动清单-7">行动清单</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> 对最近一个纠结的决定用加权矩阵打分</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="时间管理精力比时间更重要"><a class="header" href="#时间管理精力比时间更重要">时间管理：精力比时间更重要</a></h1>
+<blockquote>
+<p>时间对每个人都是 24 小时，但精力不是。</p>
+</blockquote>
+<h2 id="常见误区"><a class="header" href="#常见误区">常见误区</a></h2>
+<ul>
+<li>把所有事情都放日历上</li>
+<li>追求“完美的一天“</li>
+<li>把效率工具当生产力</li>
+</ul>
+<h2 id="精力管理四象限"><a class="header" href="#精力管理四象限">精力管理四象限</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>状态</th><th>适合做的事</th></tr>
+</thead>
+<tbody>
+<tr><td>高精力、高专注</td><td>深度工作（写作、编码、设计）</td></tr>
+<tr><td>高精力、低专注</td><td>沟通、会议、回复</td></tr>
+<tr><td>低精力、高专注</td><td>阅读、学习、复盘</td></tr>
+<tr><td>低精力、低专注</td><td>休息、运动、整理</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="时间块工作法"><a class="header" href="#时间块工作法">时间块工作法</a></h2>
+<ul>
+<li>上午：深度工作块（2-3 小时）</li>
+<li>下午：沟通 / 协作块</li>
+<li>傍晚：学习 / 阅读块</li>
+<li>晚上：复盘 / 放松</li>
+</ul>
+<h2 id="保护你的注意力"><a class="header" href="#保护你的注意力">保护你的注意力</a></h2>
+<ul>
+<li>通知是最大的时间杀手</li>
+<li>批量处理 &gt; 随时响应</li>
+</ul>
+<h2 id="本章小结-8"><a class="header" href="#本章小结-8">本章小结</a></h2>
+<h2 id="行动清单-8"><a class="header" href="#行动清单-8">行动清单</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> 记录 3 天你的时间花费</li>
+<li><input disabled="" type="checkbox"> 分析你的精力高峰时段在什么时候</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="习惯养成让系统自动运行"><a class="header" href="#习惯养成让系统自动运行">习惯养成：让系统自动运行</a></h1>
+<blockquote>
+<p>不要依赖意志力，依赖系统。</p>
+</blockquote>
+<h2 id="习惯的运作原理"><a class="header" href="#习惯的运作原理">习惯的运作原理</a></h2>
+<ul>
+<li>提示 → 渴求 → 反应 → 奖励</li>
+<li>为什么改不掉坏习惯：环境 &gt; 意志力</li>
+</ul>
+<h2 id="建立好习惯的四个原则"><a class="header" href="#建立好习惯的四个原则">建立好习惯的四个原则</a></h2>
+<ol>
+<li><strong>让它显而易见</strong>：把跑鞋放在门口</li>
+<li><strong>让它有吸引力</strong>：绑定你喜欢做的事</li>
+<li><strong>让它简单易行</strong>：两分钟法则</li>
+<li><strong>让它令人愉悦</strong>：即时奖励</li>
+</ol>
+<h2 id="习惯叠加"><a class="header" href="#习惯叠加">习惯叠加</a></h2>
+<p>在 [现有习惯] 之后，我会 [新习惯]。</p>
+<p>例子：喝完咖啡之后，我会写下今天的三个目标。</p>
+<h2 id="坏习惯的对抗"><a class="header" href="#坏习惯的对抗">坏习惯的对抗</a></h2>
+<ul>
+<li>增加 friction（把手机放另一个房间）</li>
+<li>改变环境（不在床上工作）</li>
+</ul>
+<h2 id="本章小结-9"><a class="header" href="#本章小结-9">本章小结</a></h2>
+<h2 id="行动清单-9"><a class="header" href="#行动清单-9">行动清单</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> 确定一个你想养成的习惯，用习惯叠加公式写下来</li>
+<li><input disabled="" type="checkbox"> 修改环境让好习惯更容易</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="目标设定okr-与长期主义"><a class="header" href="#目标设定okr-与长期主义">目标设定：OKR 与长期主义</a></h1>
+<h2 id="为什么大部分目标完不成"><a class="header" href="#为什么大部分目标完不成">为什么大部分目标完不成</a></h2>
+<ul>
+<li>目标太空泛（“学好英语”）</li>
+<li>目标太激进（“一个月减 20 斤”）</li>
+<li>没有执行系统</li>
+</ul>
+<h2 id="okr-框架"><a class="header" href="#okr-框架">OKR 框架</a></h2>
+<ul>
+<li><strong>Objective</strong>：有挑战的方向（定性）</li>
+<li><strong>Key Results</strong>：可衡量的结果（定量）</li>
+</ul>
+<h3 id="例子"><a class="header" href="#例子">例子</a></h3>
+<p>O：在半年内提升技术影响力
+KR1：发表 6 篇技术博客，每篇阅读 &gt; 1000
+KR2：在技术会议上做 1 次分享
+KR3：GitHub 项目获得 100+ star</p>
+<h2 id="长期主义不是等"><a class="header" href="#长期主义不是等">长期主义不是“等“</a></h2>
+<ul>
+<li>长期主义 = 今天做明天不一定见效、但长期一定重要的事</li>
+<li>每年只选 1-2 个这样的方向</li>
+</ul>
+<h2 id="年度目标--季度目标--周行动"><a class="header" href="#年度目标--季度目标--周行动">年度目标 → 季度目标 → 周行动</a></h2>
+<ul>
+<li>分解到可执行的粒度才有意义</li>
+<li>每周回顾进度</li>
+</ul>
+<h2 id="本章小结-10"><a class="header" href="#本章小结-10">本章小结</a></h2>
+<h2 id="行动清单-10"><a class="header" href="#行动清单-10">行动清单</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> 写一个本季度的 OKR</li>
+<li><input disabled="" type="checkbox"> 把它拆解到本周的行动</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="反馈循环如何持续改进"><a class="header" href="#反馈循环如何持续改进">反馈循环：如何持续改进</a></h1>
+<blockquote>
+<p>没有反馈，就没有成长。</p>
+</blockquote>
+<h2 id="建立反馈的三种方式"><a class="header" href="#建立反馈的三种方式">建立反馈的三种方式</a></h2>
+<h3 id="1-来自事的反馈"><a class="header" href="#1-来自事的反馈">1. 来自事的反馈</a></h3>
+<ul>
+<li>量化数据：代码指标、项目交付率、NPS</li>
+<li>每次交付后问自己：哪里可以更好？</li>
+</ul>
+<h3 id="2-来自人的反馈"><a class="header" href="#2-来自人的反馈">2. 来自人的反馈</a></h3>
+<ul>
+<li>主动问：“有什么我可以做的不一样的地方？”</li>
+<li>而不是：“你觉得我做得怎么样？”</li>
+</ul>
+<h3 id="3-来自自己的反馈"><a class="header" href="#3-来自自己的反馈">3. 来自自己的反馈</a></h3>
+<ul>
+<li>日复盘 / 周复盘</li>
+<li>定期看自己的决策记录</li>
+</ul>
+<h2 id="反馈接收原则"><a class="header" href="#反馈接收原则">反馈接收原则</a></h2>
+<ul>
+<li>先理解，再判断</li>
+<li>感谢所有反馈，选择性采纳</li>
+<li>攻击你的不是反馈，是情绪</li>
+</ul>
+<h2 id="本章小结-11"><a class="header" href="#本章小结-11">本章小结</a></h2>
+<h2 id="行动清单-11"><a class="header" href="#行动清单-11">行动清单</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> 找一个你信任的人，问一个具体的改进问题</li>
+<li><input disabled="" type="checkbox"> 设置一个每周的反馈回顾时间</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="输入输出学习与分享的闭环"><a class="header" href="#输入输出学习与分享的闭环">输入输出：学习与分享的闭环</a></h1>
+<h2 id="学习的金字塔"><a class="header" href="#学习的金字塔">学习的金字塔</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>方式</th><th>留存率</th></tr>
+</thead>
+<tbody>
+<tr><td>听课</td><td>5%</td></tr>
+<tr><td>阅读</td><td>10%</td></tr>
+<tr><td>讨论</td><td>50%</td></tr>
+<tr><td>实践</td><td>75%</td></tr>
+<tr><td>教给别人</td><td>90%</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="feynman-学习法"><a class="header" href="#feynman-学习法">Feynman 学习法</a></h2>
+<ol>
+<li>选一个概念</li>
+<li>用最简单的语言解释给一个门外汉听</li>
+<li>发现卡壳的地方 → 回头学习</li>
+<li>简化、用类比</li>
+</ol>
+<h2 id="输出的最小闭环"><a class="header" href="#输出的最小闭环">输出的最小闭环</a></h2>
+<ul>
+<li>读完一篇文章 → 写三句话总结</li>
+<li>学完一个工具 → 写一个小 demo</li>
+<li>做完一个项目 → 写一篇复盘</li>
+</ul>
+<h2 id="我的输入输出系统"><a class="header" href="#我的输入输出系统">我的输入输出系统</a></h2>
+<p>分享一下你自己怎么安排学习和输出——比如看完书写笔记 + 写博客 + 做分享。</p>
+<h2 id="本章小结-12"><a class="header" href="#本章小结-12">本章小结</a></h2>
+<h2 id="行动清单-12"><a class="header" href="#行动清单-12">行动清单</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> 本周看一篇文章，用三句话总结</li>
+<li><input disabled="" type="checkbox"> 把你最近学的一个东西教给别人</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="思维模型扩展你的工具箱"><a class="header" href="#思维模型扩展你的工具箱">思维模型：扩展你的工具箱</a></h1>
+<blockquote>
+<p>手里有锤子，看什么都是钉子。拥有多个思维模型，才能看到更真实的世界。</p>
+</blockquote>
+<h2 id="什么是思维模型"><a class="header" href="#什么是思维模型">什么是思维模型</a></h2>
+<p>思维模型是你理解世界运作方式的框架。每多一个模型，就多一个看问题的角度。</p>
+<h2 id="几个重要的思维模型"><a class="header" href="#几个重要的思维模型">几个重要的思维模型</a></h2>
+<h3 id="奥卡姆剃刀"><a class="header" href="#奥卡姆剃刀">奥卡姆剃刀</a></h3>
+<p>最简单的解释往往是最好的。不要为不需要的原因做不必要的假设。</p>
+<h3 id="第一性原理"><a class="header" href="#第一性原理">第一性原理</a></h3>
+<p>拆解到最基本的真理，再重新构建，而不是模仿别人。</p>
+<h3 id="机会成本"><a class="header" href="#机会成本">机会成本</a></h3>
+<p>选择 A 的真正成本是放弃 B 带来的价值。</p>
+<h3 id="二阶思维"><a class="header" href="#二阶思维">二阶思维</a></h3>
+<p>不仅要考虑“如果我这么做会怎样“，还要考虑“如果我这么做之后别人会怎么反应“。</p>
+<h2 id="如何积累思维模型"><a class="header" href="#如何积累思维模型">如何积累思维模型</a></h2>
+<ul>
+<li>跨领域阅读</li>
+<li>每学一个模型就找一个生活中的应用场景</li>
+<li>建立自己的“思维模型清单“</li>
+</ul>
+<h2 id="本章小结-13"><a class="header" href="#本章小结-13">本章小结</a></h2>
+<h2 id="行动清单-13"><a class="header" href="#行动清单-13">行动清单</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> 列出你已经掌握的几个思维模型</li>
+<li><input disabled="" type="checkbox"> 本周学一个新的思维模型并用一次</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="对抗熵增保持系统活力"><a class="header" href="#对抗熵增保持系统活力">对抗熵增：保持系统活力</a></h1>
+<blockquote>
+<p>任何系统如果不持续输入能量，都会走向混乱和无序。</p>
+</blockquote>
+<h2 id="熵增在成长中的表现"><a class="header" href="#熵增在成长中的表现">熵增在成长中的表现</a></h2>
+<ul>
+<li>知识体系不再更新</li>
+<li>好习惯逐渐荒废</li>
+<li>社交圈子越来越封闭</li>
+</ul>
+<h2 id="对抗熵增的几种方式"><a class="header" href="#对抗熵增的几种方式">对抗熵增的几种方式</a></h2>
+<h3 id="持续输入"><a class="header" href="#持续输入">持续输入</a></h3>
+<ul>
+<li>阅读跨领域的书</li>
+<li>接触不同背景的人</li>
+<li>定期跳出舒适区</li>
+</ul>
+<h3 id="定期整理"><a class="header" href="#定期整理">定期整理</a></h3>
+<ul>
+<li>笔记系统的定期清理和重构</li>
+<li>人际关系的高频清洗</li>
+<li>目标的季度回顾和调整</li>
+</ul>
+<h3 id="主动破坏"><a class="header" href="#主动破坏">主动破坏</a></h3>
+<ul>
+<li>打破固定的生活/工作模式</li>
+<li>换一个角度思考熟悉的问题</li>
+</ul>
+<h2 id="保持可塑期"><a class="header" href="#保持可塑期">保持“可塑期“</a></h2>
+<ul>
+<li>人越年轻越容易改变，但学习能力可以保持</li>
+<li>不断让自己处于“新手“状态</li>
+</ul>
+<h2 id="本章小结-14"><a class="header" href="#本章小结-14">本章小结</a></h2>
+<h2 id="行动清单-14"><a class="header" href="#行动清单-14">行动清单</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> 找出你当前生活中“熵增“最明显的 1-2 个领域</li>
+<li><input disabled="" type="checkbox"> 制定一个“对抗熵增“的小行动</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="从优秀到卓越"><a class="header" href="#从优秀到卓越">从优秀到卓越</a></h1>
+<blockquote>
+<p>优秀是做好了该做的事，卓越是在正确的方向上持续做正确的事。</p>
+</blockquote>
+<h2 id="优秀-vs-卓越"><a class="header" href="#优秀-vs-卓越">优秀 vs 卓越</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>优秀</th><th>卓越</th></tr>
+</thead>
+<tbody>
+<tr><td>完成任务</td><td>定义任务</td></tr>
+<tr><td>解决问题</td><td>发现根本问题</td></tr>
+<tr><td>在系统内做最好</td><td>改进系统本身</td></tr>
+<tr><td>执行者思维</td><td>设计者思维</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="从执行者到设计者"><a class="header" href="#从执行者到设计者">从执行者到设计者</a></h2>
+<ul>
+<li>阶段一：<strong>执行</strong> — 把事做好</li>
+<li>阶段二：<strong>优化</strong> — 把事做快做好</li>
+<li>阶段三：<strong>设计</strong> — 设计系统让别人做好</li>
+<li>阶段四：<strong>定义</strong> — 定义什么是对的</li>
+</ul>
+<h2 id="持续迭代的文化"><a class="header" href="#持续迭代的文化">持续迭代的文化</a></h2>
+<ul>
+<li>不要“完成“，要“迭代“</li>
+<li>每一次交付都是下一次的起点</li>
+</ul>
+<h2 id="最后的话"><a class="header" href="#最后的话">最后的话</a></h2>
+<p>这本书的方法论，本质上是让你<strong>越用越强</strong>的。不是“看完就完了“，而是“每用一次，系统就升级一次“。</p>
+<h2 id="行动清单-15"><a class="header" href="#行动清单-15">行动清单</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> 在你当前的角色上，找到一件可以“设计“而不是“执行“的事</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="参考书单"><a class="header" href="#参考书单">参考书单</a></h1>
+<p>这些书中的思想或框架直接或间接影响了本书的方法论：</p>
+<h2 id="思维与决策"><a class="header" href="#思维与决策">思维与决策</a></h2>
+<ul>
+<li>《思考，快与慢》— Daniel Kahneman</li>
+<li>《穷查理宝典》— Charlie Munger</li>
+<li>《原则》— Ray Dalio</li>
+</ul>
+<h2 id="习惯与系统"><a class="header" href="#习惯与系统">习惯与系统</a></h2>
+<ul>
+<li>《原子习惯》— James Clear</li>
+<li>《高效能人士的七个习惯》— Stephen Covey</li>
+<li>《深度工作》— Cal Newport</li>
+</ul>
+<h2 id="学习方法"><a class="header" href="#学习方法">学习方法</a></h2>
+<ul>
+<li>《How to Take Smart Notes》— Sönke Ahrens</li>
+<li>《费曼学习法》</li>
+<li>《学习之道》— Barbara Oakley</li>
+</ul>
+<h2 id="认知提升"><a class="header" href="#认知提升">认知提升</a></h2>
+<ul>
+<li>《刻意练习》— Anders Ericsson</li>
+<li>《心流》— Mihaly Csikszentmihalyi</li>
+<li>《反脆弱》— Nassim Taleb</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="工具箱推荐"><a class="header" href="#工具箱推荐">工具箱推荐</a></h1>
+<p>这里列出我实际使用并推荐的工具，按用途分类：</p>
+<h2 id="笔记--知识管理"><a class="header" href="#笔记--知识管理">笔记 &amp; 知识管理</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>工具</th><th>用途</th><th>推荐理由</th></tr>
+</thead>
+<tbody>
+<tr><td>Obsidian</td><td>个人知识库</td><td>本地优先、双向链接、Markdown</td></tr>
+<tr><td>Notion</td><td>项目 / 团队协作</td><td>All-in-one、数据库功能强</td></tr>
+<tr><td>VS Code / Cursor</td><td>技术笔记 + 写代码</td><td>开发者友好</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="任务--项目管理"><a class="header" href="#任务--项目管理">任务 &amp; 项目管理</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>工具</th><th>用途</th></tr>
+</thead>
+<tbody>
+<tr><td>Things 3</td><td>个人待办（macOS / iOS）</td></tr>
+<tr><td>Notion</td><td>项目管理</td></tr>
+<tr><td>GitHub Projects</td><td>开源 / 技术项目管理</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="阅读--信息输入"><a class="header" href="#阅读--信息输入">阅读 &amp; 信息输入</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>工具</th><th>用途</th></tr>
+</thead>
+<tbody>
+<tr><td>Kindle</td><td>电子书阅读</td></tr>
+<tr><td>Readwise</td><td>高亮和笔记同步</td></tr>
+<tr><td>RSS（Reeder）</td><td>信息订阅</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="习惯--复盘"><a class="header" href="#习惯--复盘">习惯 &amp; 复盘</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>工具</th><th>用途</th></tr>
+</thead>
+<tbody>
+<tr><td>Day One</td><td>日记和复盘</td></tr>
+<tr><td>Loop Habit Tracker</td><td>习惯追踪</td></tr>
+<tr><td>简单表格 / 笔记</td><td>KPT 复盘</td></tr>
+</tbody>
+</table>
+</div>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-09f2665d.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-c22b7243.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>
